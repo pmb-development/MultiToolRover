@@ -12,6 +12,7 @@
 		2042E9932266466A0028458F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2042E9912266466A0028458F /* Main.storyboard */; };
 		2042E9952266466C0028458F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2042E9942266466C0028458F /* Assets.xcassets */; };
 		2042E9982266466C0028458F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2042E9962266466C0028458F /* LaunchScreen.storyboard */; };
+		2063850A2277498D00047FDE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206385092277498D00047FDE /* Data.swift */; };
 		DE9BC37959BA702075B9859F /* Pods_MTR_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF5B57CD1E31FB1EB5D82E1 /* Pods_MTR_Mobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		2042E9942266466C0028458F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2042E9972266466C0028458F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2042E9992266466C0028458F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206385092277498D00047FDE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3CF5B57CD1E31FB1EB5D82E1 /* Pods_MTR_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTR_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A212498186BD6ACF79FB5DC /* Pods-MTR_Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTR_Mobile.release.xcconfig"; path = "Target Support Files/Pods-MTR_Mobile/Pods-MTR_Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		88C851514459BA3FE3DDD59F /* Pods-MTR_Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTR_Mobile.debug.xcconfig"; path = "Target Support Files/Pods-MTR_Mobile/Pods-MTR_Mobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				2042E9942266466C0028458F /* Assets.xcassets */,
 				2042E9962266466C0028458F /* LaunchScreen.storyboard */,
 				2042E9992266466C0028458F /* Info.plist */,
+				206385092277498D00047FDE /* Data.swift */,
 			);
 			path = MTR_Mobile;
 			sourceTree = "<group>";
@@ -85,7 +88,6 @@
 				88C851514459BA3FE3DDD59F /* Pods-MTR_Mobile.debug.xcconfig */,
 				5A212498186BD6ACF79FB5DC /* Pods-MTR_Mobile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2042E9902266466A0028458F /* ViewController.swift in Sources */,
+				2063850A2277498D00047FDE /* Data.swift in Sources */,
 				2042E98E2266466A0028458F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
