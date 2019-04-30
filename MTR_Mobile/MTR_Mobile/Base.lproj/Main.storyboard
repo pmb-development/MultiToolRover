@@ -35,6 +35,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -69,10 +72,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cm6-rq-1kl">
-                                        <rect key="frame" x="3.6666666666666572" y="208" width="348" height="29.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="208" width="355" height="29.666666666666657"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TPn-6p-xlK">
-                                                <rect key="frame" x="-2" y="0.0" width="352" height="30.666666666666668"/>
+                                                <rect key="frame" x="-2" y="0.0" width="359" height="30.666666666666668"/>
                                                 <connections>
                                                     <action selector="velocityValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MzW-Kk-wyC"/>
                                                 </connections>

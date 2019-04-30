@@ -122,6 +122,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshGui()
+        ipAddressTF.returnKeyType = UIReturnKeyType.done
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -135,4 +136,3 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
 }
-
