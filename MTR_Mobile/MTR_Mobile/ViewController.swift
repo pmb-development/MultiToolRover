@@ -9,7 +9,7 @@
 import UIKit
 import SwiftSocket
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     // Variables
     var client: TCPClient = TCPClient(address: "", port: 1804)
@@ -118,13 +118,22 @@ class ViewController: UIViewController {
     
     @IBAction func moveLeftTapped(_ sender: UIButton) {
     }
-    
+
     override func viewDidLoad() {
-        refreshGui()
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        refreshGui()
+        ipAddressTF.delegate = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
 
