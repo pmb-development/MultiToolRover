@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     // GUI Variables
-    @IBOutlet weak var ipAddressTF: UITextField!
+    @IBOutlet weak var ipAddressTF: UITextField! { didSet { ipAddressTF.delegate = self } }
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var disconnectButton: UIButton!
     @IBOutlet weak var velocitySlider: UISlider!
@@ -122,7 +122,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshGui()
-        ipAddressTF.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
