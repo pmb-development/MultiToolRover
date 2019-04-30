@@ -1,0 +1,6 @@
+framework module Pods_MTR_Mobile_Basic {
+  umbrella header "Pods-MTR_Mobile_Basic-umbrella.h"
+
+  export *
+  module * { export * }
+}

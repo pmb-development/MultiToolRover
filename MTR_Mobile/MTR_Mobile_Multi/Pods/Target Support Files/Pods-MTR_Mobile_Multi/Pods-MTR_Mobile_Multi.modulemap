@@ -1,0 +1,6 @@
+framework module Pods_MTR_Mobile_Multi {
+  umbrella header "Pods-MTR_Mobile_Multi-umbrella.h"
+
+  export *
+  module * { export * }
+}
