@@ -69,10 +69,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cm6-rq-1kl">
-                                        <rect key="frame" x="9.6666666666666572" y="208" width="336" height="29.666666666666657"/>
+                                        <rect key="frame" x="7.6666666666666572" y="208" width="340" height="29.666666666666657"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TPn-6p-xlK">
-                                                <rect key="frame" x="-2" y="0.0" width="340" height="30.666666666666668"/>
+                                                <rect key="frame" x="-2" y="0.0" width="344" height="30.666666666666668"/>
                                                 <connections>
                                                     <action selector="velocityValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MzW-Kk-wyC"/>
                                                 </connections>
@@ -184,7 +184,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backwardButton" destination="iPT-8O-3Ht" id="WI5-bq-j0K"/>
+                        <outlet property="connectButton" destination="Krk-bm-NGX" id="JUb-bp-Old"/>
+                        <outlet property="disconnectButton" destination="zqC-mV-eHU" id="QjU-sr-Nv9"/>
+                        <outlet property="forwardButton" destination="CFn-ZI-rrh" id="hcn-Kw-cRj"/>
                         <outlet property="ipAddressTF" destination="4mp-Wv-6EC" id="Wxp-VE-qp9"/>
+                        <outlet property="leftButton" destination="olx-Mt-7IZ" id="Hyp-XQ-FeZ"/>
+                        <outlet property="rightButton" destination="qEn-0E-L8v" id="Tc3-2R-7s8"/>
+                        <outlet property="speedModeSwitch" destination="cg7-ha-ykf" id="m8v-jV-bTa"/>
+                        <outlet property="velocitySlider" destination="TPn-6p-xlK" id="6qo-Gw-VGr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

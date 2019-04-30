@@ -13,6 +13,7 @@ class MTR {
 
     // Variables
     private var _velocity: Int = 0
+    private var _speedMode: Bool = false
     
     private var _leftMotor: Int = 0
     private var _rightMotor: Int = 0
@@ -38,6 +39,8 @@ class MTR {
     private var _display: Int = 0
     
     private var _request: String = ""
+    
+    private var _connected: Bool = false
 
     //Singleton
     class var sharedInstance: MTR {
@@ -98,21 +101,40 @@ class MTR {
     }
     
     public func sendRequest(client: TCPClient) throws -> String? {
-        switch client.send(string: _request) {
-            case .success:
-                guard let data = client.read(1024*10) else {
-                    return nil
-                }
-                if let response = String(bytes: data, encoding: .utf8) {
-                    return response
-                }
-            case .failure(let error):
-                throw error
+        if _connected {
+            switch client.send(string: _request) {
+                case .success:
+                    guard let data = client.read(1024*10) else {
+                        return nil
+                    }
+                    if let response = String(bytes: data, encoding: .utf8) {
+                        return response
+                    }
+                case .failure(let error):
+                    throw error
+            }
+            return nil
+        } else {
+            return nil
         }
-        return nil
     }
     
     //Properties
+    public var connected: Bool {
+        get { return _connected }
+        set { _connected = newValue }
+    }
+    
+    public var velocity: Int {
+        get { return _velocity }
+        set { _velocity = newValue }
+    }
+    
+    public var speedMode: Bool {
+        get { return _speedMode }
+        set { _speedMode = newValue }
+    }
+    
     public var leftMotor: Int {
         get { return _leftMotor }
         set {
