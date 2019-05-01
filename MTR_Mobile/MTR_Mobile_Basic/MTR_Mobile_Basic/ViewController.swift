@@ -59,10 +59,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             client = TCPClient(address: ipAddressTF.text!, port: 1804)
             let result = client.connect(timeout: 3)
-            if (result.isFailure) {
+            if (result.isSuccess) {
+                switch client.send(string: "Connect-1234") {
+                    case .failure(let error):
+                        throw error
+                    case .success:
+                        MTR.sharedInstance.connected = true
+                }
+            } else if (result.isFailure) {
                 throw result.error!
             }
-            MTR.sharedInstance.connected = true
             
         } catch (ConnectionError.ipEmpty) {
             MTR.sharedInstance.connected = false
